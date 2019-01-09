@@ -5,33 +5,24 @@
     <title>Mobile Game</title>
   </head>
   <body>
-    Objects
+    Strings
     <script>
-    // one way to declare object
-      var player1 = {};
-    // second way to declare Objects
-      var player2 = new Object();
+    // concatenating Strings
+    var title = "Mr";
+    var name = "Pablo";
+    var sentance = "Hello " + title + " " + name
+    console.log(sentance);
 
-      console.log("Player 1 = ", player1);
-      console.log("Player 2 = ", player2);
+    //to upper case
+    var s = sentance.toUpperCase();
 
-      player1 = {
-        name: 'Your name',
-        energy: 100,
-        lives: 2,
-        x: 19,
-        y: 100,
-        color: 'blue'
-      };
-      // accessing object atributes and properties
-      console.log(player1.name);
-      console.log(player1['color']);
-      console.log(player1);
-      player1.friend = {
-        name: 'Pablo'
-      };
-      player1.weapon = 'sword';
+    //to lower case
+    sentance = sentance.toLowerCase();
 
+    // getting a part of string - substring
+    var a = "Hello world JavaScript";
+    var b;
+    b = a.slice(6,11);
 
 
     </script>
