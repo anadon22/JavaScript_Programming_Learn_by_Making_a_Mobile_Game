@@ -5,14 +5,35 @@
     <title>Mobile Game</title>
   </head>
   <body>
-    Variables
+    Objects
     <script>
-      var a;
-      var b = 10;
-      a = 20;
-      alert(a);
-      var text = "Hello world";
-      alert(text);
+    // one way to declare object
+      var player1 = {};
+    // second way to declare Objects
+      var player2 = new Object();
+
+      console.log("Player 1 = ", player1);
+      console.log("Player 2 = ", player2);
+
+      player1 = {
+        name: 'Your name',
+        energy: 100,
+        lives: 2,
+        x: 19,
+        y: 100,
+        color: 'blue'
+      };
+      // accessing object atributes and properties
+      console.log(player1.name);
+      console.log(player1['color']);
+      console.log(player1);
+      player1.friend = {
+        name: 'Pablo'
+      };
+      player1.weapon = 'sword';
+
+
+
     </script>
     <!-- <script type="text/javascript">
       alert("Hello world");
