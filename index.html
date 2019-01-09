@@ -5,26 +5,38 @@
     <title>Mobile Game</title>
   </head>
   <body>
-    Strings
+    Arrays
     <script>
-    // concatenating Strings
-    var title = "Mr";
-    var name = "Pablo";
-    var sentance = "Hello " + title + " " + name
-    console.log(sentance);
+    // first way how to initialize array
+      var shoppingList1 = new Array();
+    // second way how to initialize array
+      var shoppingList2 = [
+        'bread',
+        'carrots',
+        'fish'
+      ];
+      var a = shoppingList2[1];
+      console.log(shoppingList2);
+      console.log(a);
 
-    //to upper case
-    var s = sentance.toUpperCase();
-
-    //to lower case
-    sentance = sentance.toLowerCase();
-
-    // getting a part of string - substring
-    var a = "Hello world JavaScript";
-    var b;
-    b = a.slice(6,11);
+      shoppingList2[2] = 'meat';
+      console.log(shoppingList2);
 
 
+      var enemies = [{
+          x: 10,
+          y: 10,
+          color: 'blue'
+        }, {
+          x: 10,
+          y: 10,
+          color: 'red'
+      }];
+      console.log(enemies);
+      var l = [
+        1, 'asda', 22.24, {name: 'hello'}
+      ];
+      console.log(l);
     </script>
     <!-- <script type="text/javascript">
       alert("Hello world");
