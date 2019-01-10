@@ -5,10 +5,27 @@
     <title>Mobile Game</title>
   </head>
   <body>
-    Multi-dimensional Arrays
+    Arrays and Objects
     <script>
-      var a = [23, 33, ['a', 12, [4, 5, 6]], 131];
-      console.log(a);
+      var enemies = [
+        {x:10, y: 50, energy: 100},
+        {x:11, y: 50, energy: 10},
+        {x:12, y: 50, energy: 50},
+        {x:13, y: 50, energy: 80},
+        {x:14, y: 50, energy: 40},
+        {x:15, y: 50, energy: 70}
+      ];
+      enemies[3].energy = 12;
+      console.log(enemies);
+
+      var player = {
+        name: 'Somebody',
+        energy: 20,
+        weapons: ['sword', 'gun', 'club']
+      };
+      // add new weapons
+      player.weapons.push('knife');
+      console.log(player);
     </script>
     <!-- <script type="text/javascript">
       alert("Hello world");
