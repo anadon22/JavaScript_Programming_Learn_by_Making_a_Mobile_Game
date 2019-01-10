@@ -5,38 +5,21 @@
     <title>Mobile Game</title>
   </head>
   <body>
-    Arrays
+    Adding and Removing Elements from Arrays
     <script>
-    // first way how to initialize array
-      var shoppingList1 = new Array();
-    // second way how to initialize array
-      var shoppingList2 = [
-        'bread',
-        'carrots',
-        'fish'
-      ];
-      var a = shoppingList2[1];
-      console.log(shoppingList2);
-      console.log(a);
+      var weapons = ['sword', 'laser gun', 'stick', 'axe'];
+      var lengthOfArr = weapons.length;
 
-      shoppingList2[2] = 'meat';
-      console.log(shoppingList2);
+      weapons.push('knife', 'laser knife');
+      console.log(weapons);
+      weapons.pop();
+      console.log(weapons);
+      weapons.splice(1,2);
+      console.log(weapons);
+      weapons.splice(0,2,'bomb', 'bow and arrow');
+      console.log(weapons);
 
 
-      var enemies = [{
-          x: 10,
-          y: 10,
-          color: 'blue'
-        }, {
-          x: 10,
-          y: 10,
-          color: 'red'
-      }];
-      console.log(enemies);
-      var l = [
-        1, 'asda', 22.24, {name: 'hello'}
-      ];
-      console.log(l);
     </script>
     <!-- <script type="text/javascript">
       alert("Hello world");
