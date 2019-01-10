@@ -10,17 +10,30 @@
   </style>
 </head>
 <body>
-  <h1>Challenge - Add a Player Object</h1>
+  <h1>Challenge - Adding Enemies</h1>
   <canvas id="mycanvas" width="640" height="360" ></canvas>
   <script>
     window.addEventListener("load",function() {
-
+      
       //constants
       var GAME_WIDTH = 640;
       var GAME_HEIGHT = 360;
 
       //keep the game going
       var gameLive = true;
+
+      /*
+
+      ///////////////////
+
+      CHALLENGE - Add enemies to the game
+
+      Add two new enemies:
+
+      -enemy on 300 for x, 100 for y, speed of 1. keep same w and h
+      -enemy on 140 for x, 300 for y, speed of 1. keep same w and h
+
+      */
 
       //enemies
       var enemies = [
@@ -55,17 +68,6 @@
       ];
 
       //the player object
-      /**
-      /////////////////////////////////////////////////
-      CHALLENGE - Create an object to represent the player
-      -create a variable called player
-      -it should be an object with the following properties: x with a value of
-      10, y with a value of 160, speedX with a value of 2.5, isMoving with a
-      value of 0, w with a value of 40, h with a value of 40.
-      ////////////////////////////////////////////////
-      create it bellow, outside of this commenting area!
-      */
-
       var player = {
         x: 10,
         y: 160,
@@ -83,7 +85,6 @@
         h: 36
       }
 
-
       var sprites = {};
 
       var movePlayer = function() {
@@ -93,16 +94,16 @@
       var stopPlayer = function() {
         player.isMoving = false;
       }
-
+      
       //grab the canvas and context
       var canvas = document.getElementById("mycanvas");
       var ctx = canvas.getContext("2d");
 
       //event listeners to move player
       canvas.addEventListener('mousedown', movePlayer);
-      canvas.addEventListener('mouseup', stopPlayer);
+      canvas.addEventListener('mouseup', stopPlayer);   
       canvas.addEventListener('touchstart', movePlayer);
-      canvas.addEventListener('touchend', stopPlayer);
+      canvas.addEventListener('touchend', stopPlayer);   
 
       var load = function() {
         sprites.player = new Image();
@@ -140,7 +141,7 @@
         //update enemies
         var i = 0;
         var n = enemies.length;
-
+        
         enemies.forEach(function(element, index){
 
           //check for collision with player
@@ -156,7 +157,7 @@
 
           //move enemy
           element.y += element.speedY;
-
+          
           //check borders
           if(element.y <= 10) {
             element.y = 10;
@@ -173,7 +174,7 @@
       //show the game on the screen
       var draw = function() {
         //clear the canvas
-        ctx.clearRect(0,0,GAME_WIDTH,GAME_HEIGHT);
+        ctx.clearRect(0,0,GAME_WIDTH,GAME_HEIGHT);        
 
         //draw background
         ctx.drawImage(sprites.background, 0, 0);
@@ -197,8 +198,8 @@
         draw();
 
         if(gameLive) {
-          window.requestAnimationFrame(step);
-        }
+          window.requestAnimationFrame(step); 
+        }     
       };
 
       //check the collision between two rectangles
