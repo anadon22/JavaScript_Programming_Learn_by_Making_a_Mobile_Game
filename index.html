@@ -5,30 +5,25 @@
     <title>Mobile Game</title>
   </head>
   <body>
-    Methods
+    Functions expressions
     <script>
+      var fly = function() {
+        console.log("You are flying");
+      }
+      fly();
       var player = {
-        x: 100,
-        y: 200,
-        energy: 10,
-        weapons: ['sword', 'gun'],
-        addWeapon: function (newWeapon) {
-          this.weapons.push(newWeapon);
-        },
-        addEnergy: function (newEnergy) {
-          this.energy = this.energy + newEnergy;
+        x: 10,
+        y: 20,
+        energy: 100,
+        superpower: function() {
+          console.log("No superpower");
         }
       };
-      console.log(player);
+      player.x = 100;
+      // setting up a super power
+      player.superpower = fly;
 
-      player.addWeapon('axe');
-      player.addWeapon('laser gun');
-      player.addWeapon('knife');
-      console.log(player.weapons);;
-
-      player.addEnergy(10);
-      console.log(player.energy)
-
+      player.superpower();
 
     </script>
   </body>
