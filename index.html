@@ -3,28 +3,26 @@
   <head>
     <meta charset="utf-8">
     <title>Mobile Game</title>
+    <style>
+      canvas {
+        border: 1px solid black;
+      }
+    </style>
   </head>
   <body>
-    Functions expressions
+    Canvas
+    <!-- add canvas tag -->
+    <canvas id="myCanvas" width="300" height="300"></canvas>
     <script>
-      var fly = function() {
-        console.log("You are flying");
-      }
-      fly();
-      var player = {
-        x: 10,
-        y: 20,
-        energy: 100,
-        superpower: function() {
-          console.log("No superpower");
-        }
-      };
-      player.x = 100;
-      // setting up a super power
-      player.superpower = fly;
-
-      player.superpower();
-
+    // select by id
+      var canvas = document.getElementById('myCanvas');
+      // create context
+      // grab 2d context
+      var ctx = canvas.getContext("2d");
+      // set filling color
+      ctx.fillStyle = "rgb(200,0,200)";
+      // draw rectangel
+      ctx.fillRect(50,40,100, 30);
     </script>
   </body>
 </html>
